@@ -9,7 +9,7 @@ const HomePage = async () => {
   return (
     <div>
       <h1 className="text-center text-4xl">Next.js image optimization</h1>
-      <div className=" grid grid-cols-3 m-3">
+      <div className=" grid lg:grid-cols-3 m-3 md:grid-cols-2 sm:grid-cols-1">
         {shoes.slice(0, 5).map((shoe) => (
           <div
             key={shoe.id}
@@ -23,13 +23,13 @@ const HomePage = async () => {
             </figure>
             <div className="card-body">
               <h2 className="card-title">
-                Shoes!
-                <div className="badge badge-secondary">NEW</div>
+                {shoe.name}
+                <div className="badge badge-secondary">{shoe.price}</div>
               </h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
+              <p>{shoe.description}</p>
               <div className="card-actions justify-end">
-                <div className="badge badge-outline">Fashion</div>
-                <div className="badge badge-outline">Products</div>
+                <button className="btn btn-outline btn-primary">Buy Now</button>
+                <button className="btn btn-outline btn-primary">Details</button>
               </div>
             </div>
           </div>
