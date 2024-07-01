@@ -1,0 +1,40 @@
+{
+  "shoes": [
+    {
+      "id": 1,
+      "name": "Air Max 270",
+      "description": "Nike Air Max 270 with lightweight cushioning and breathable mesh upper.",
+      "price": 150
+    },
+    {
+      "id": 2,
+      "name": "UltraBoost 21",
+      "description": "Adidas UltraBoost 21 running shoes with responsive Boost midsole.",
+      "price": 180
+    },
+    {
+      "id": 3,
+      "name": "Gel-Kayano 27",
+      "description": "ASICS Gel-Kayano 27 offering stability and support for long runs.",
+      "price": 160
+    },
+    {
+      "id": 4,
+      "name": "Chuck Taylor All Star",
+      "description": "Classic Converse Chuck Taylor All Star high-top sneakers.",
+      "price": 60
+    },
+    {
+      "id": 5,
+      "name": "Classic Leather",
+      "description": "Reebok Classic Leather shoes with retro style and comfort.",
+      "price": 75
+    },
+    {
+      "id": 6,
+      "name": "New Balance 990v5",
+      "description": "New Balance 990v5 made in the USA with premium materials and craftsmanship.",
+      "price": 175
+    }
+  ]
+}
