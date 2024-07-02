@@ -1,26 +1,22 @@
-import React from "react";
-import GalleryPage from "./gallery/page";
-import Image from "next/image";
-
-const HomePage = async () => {
+const AllShoes = async () => {
   const res = await fetch("http://localhost:5000/shoes", {
-    next: { revalidate: 5 },
+    cache: "no-store",
   });
   const shoes = await res.json();
-  // console.log(data);
   return (
     <div>
-      <h1 className="text-center text-4xl">Next.js image optimization</h1>
-      <div className=" grid lg:grid-cols-3 m-3 md:grid-cols-2 sm:grid-cols-1">
-        {shoes.slice(0, 5).map((shoe) => (
+      <h1 className="text-center text-4xl">All Shoes</h1>
+      <div className="grid grid-cols-3 gap-3 ">
+        {shoes.map((shoe) => (
           <div
             key={shoe.id}
-            className="card bg-base-100 w-96 shadow-xl mx-auto mb-4"
+            className="card bg-base-100 shadow-xl mx-auto mb-5"
           >
             <figure>
               <img
                 src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
                 alt="Shoes"
+                className=" rounded-lg"
               />
             </figure>
             <div className="card-body">
@@ -41,4 +37,4 @@ const HomePage = async () => {
   );
 };
 
-export default HomePage;
+export default AllShoes;
