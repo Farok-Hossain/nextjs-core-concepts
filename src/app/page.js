@@ -1,6 +1,7 @@
 import React from "react";
 import GalleryPage from "./gallery/page";
 import Image from "next/image";
+import Link from "next/link";
 
 const HomePage = async () => {
   const res = await fetch("http://localhost:5000/shoes", {
@@ -9,7 +10,7 @@ const HomePage = async () => {
   const shoes = await res.json();
   // console.log(data);
   return (
-    <div>
+    <div className="text-center m-5">
       <h1 className="text-center text-4xl">Next.js image optimization</h1>
       <div className=" grid lg:grid-cols-3 m-3 md:grid-cols-2 sm:grid-cols-1">
         {shoes.slice(0, 5).map((shoe) => (
@@ -37,6 +38,10 @@ const HomePage = async () => {
           </div>
         ))}
       </div>
+
+      <Link href="/all-shoes">
+        <button className="btn btn-secondary">See More</button>
+      </Link>
     </div>
   );
 };
