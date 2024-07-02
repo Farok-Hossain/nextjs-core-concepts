@@ -8,7 +8,8 @@ const HomePage = async () => {
     next: { revalidate: 5 },
   });
   const shoes = await res.json();
-  // console.log(data);
+
+  // throw new Error("Error from Home Page");
   return (
     <div className="text-center m-5">
       <h1 className="text-center text-4xl">Next.js image optimization</h1>
